@@ -23,39 +23,13 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
-        Me.btnStaff = New System.Windows.Forms.Button()
-        Me.btnStudent = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnClose = New System.Windows.Forms.Button()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
-        '
-        'btnStaff
-        '
-        Me.btnStaff.BackgroundImage = CType(resources.GetObject("btnStaff.BackgroundImage"), System.Drawing.Image)
-        Me.btnStaff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnStaff.ForeColor = System.Drawing.Color.Yellow
-        Me.btnStaff.Location = New System.Drawing.Point(12, 31)
-        Me.btnStaff.Name = "btnStaff"
-        Me.btnStaff.Size = New System.Drawing.Size(185, 122)
-        Me.btnStaff.TabIndex = 0
-        Me.btnStaff.Text = "Staff Portal"
-        Me.btnStaff.UseVisualStyleBackColor = True
-        '
-        'btnStudent
-        '
-        Me.btnStudent.BackColor = System.Drawing.Color.Transparent
-        Me.btnStudent.BackgroundImage = CType(resources.GetObject("btnStudent.BackgroundImage"), System.Drawing.Image)
-        Me.btnStudent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnStudent.Font = New System.Drawing.Font("Marlett", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnStudent.ForeColor = System.Drawing.Color.Red
-        Me.btnStudent.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.btnStudent.Location = New System.Drawing.Point(541, 26)
-        Me.btnStudent.Name = "btnStudent"
-        Me.btnStudent.Size = New System.Drawing.Size(256, 112)
-        Me.btnStudent.TabIndex = 1
-        Me.btnStudent.Text = "Student Portal"
-        Me.btnStudent.UseVisualStyleBackColor = False
         '
         'Label1
         '
@@ -91,18 +65,52 @@ Partial Class Form1
         Me.btnClose.Text = "EXIT"
         Me.btnClose.UseVisualStyleBackColor = False
         '
+        'ComboBox1
+        '
+        Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"STAFF", "STUDENTS"})
+        Me.ComboBox1.Location = New System.Drawing.Point(182, 101)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(207, 21)
+        Me.ComboBox1.TabIndex = 5
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ControlLight
+        Me.Label3.Location = New System.Drawing.Point(43, 104)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(124, 18)
+        Me.Label3.TabIndex = 6
+        Me.Label3.Text = "ACCOUNT TYPE"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(244, 206)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(108, 33)
+        Me.Button1.TabIndex = 7
+        Me.Button1.Text = "PROCEED"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.Black
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.btnStudent)
-        Me.Controls.Add(Me.btnStaff)
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.TransparencyKey = System.Drawing.Color.Transparent
@@ -110,10 +118,10 @@ Partial Class Form1
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents btnStaff As Button
-    Friend WithEvents btnStudent As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents btnClose As Button
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Button1 As Button
 End Class

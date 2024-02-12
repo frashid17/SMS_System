@@ -72,4 +72,30 @@ Public Class studentlogin
 
         Me.Close()
     End Sub
+
+    Private Sub UsernameLabel_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub txtLoginUsername_TextChanged(sender As Object, e As EventArgs) Handles txtLoginUsername.TextChanged
+
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+
+    End Sub
+
+    Private Sub studentlogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+
+        If CheckBox1.Checked Then
+            txtLoginPassword.PasswordChar = ControlChars.NullChar
+        Else
+            txtLoginPassword.PasswordChar = "*"c
+        End If
+
+    End Sub
 End Class
