@@ -87,7 +87,7 @@ Partial Class Form1
         Me.Controls.Add(Me.btnClose)
         Me.Name = "Form1"
         Me.Text = "Form1"
-        Me.TransparencyKey = System.Drawing.Color.Transparent
+        Me.TransparencyKey = System.Drawing.Color.Red
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
