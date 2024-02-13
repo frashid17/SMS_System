@@ -152,9 +152,9 @@ Partial Class Form2
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(696, 399)
+        Me.Button2.Location = New System.Drawing.Point(696, 377)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.Size = New System.Drawing.Size(75, 45)
         Me.Button2.TabIndex = 13
         Me.Button2.Text = "BACK"
         Me.Button2.UseVisualStyleBackColor = True
