@@ -53,19 +53,8 @@ Public Class studentlogin
         Me.Close()
     End Sub
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-        Timer1.Start()
-    End Sub
 
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        If Label1.Visible = True Then
-            Label1.Visible = False
-        Else
-            Label1.Visible = True
-        End If
-    End Sub
-
-    Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
+    Private Sub btnRegister_Click(sender As Object, e As EventArgs)
         Form2.Show()
 
         Me.Close()
@@ -95,5 +84,15 @@ Public Class studentlogin
             txtLoginPassword.PasswordChar = "*"c
         End If
 
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        MessageBox.Show("Please contact your ICT admin")
+    End Sub
+
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        Form2.Show()
+
+        Me.Close()
     End Sub
 End Class

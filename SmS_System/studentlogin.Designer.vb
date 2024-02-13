@@ -27,49 +27,46 @@ Partial Class studentlogin
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(studentlogin))
         Me.txtLoginUsername = New System.Windows.Forms.TextBox()
         Me.txtLoginPassword = New System.Windows.Forms.TextBox()
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.Cancel = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.btnRegister = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.SuspendLayout()
         '
         'txtLoginUsername
         '
         Me.txtLoginUsername.BackColor = System.Drawing.Color.White
-        Me.txtLoginUsername.Location = New System.Drawing.Point(237, 217)
+        Me.txtLoginUsername.Location = New System.Drawing.Point(500, 214)
         Me.txtLoginUsername.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.txtLoginUsername.Multiline = True
         Me.txtLoginUsername.Name = "txtLoginUsername"
-        Me.txtLoginUsername.Size = New System.Drawing.Size(421, 34)
+        Me.txtLoginUsername.Size = New System.Drawing.Size(155, 25)
         Me.txtLoginUsername.TabIndex = 1
         '
         'txtLoginPassword
         '
         Me.txtLoginPassword.BackColor = System.Drawing.Color.White
-        Me.txtLoginPassword.Location = New System.Drawing.Point(237, 268)
+        Me.txtLoginPassword.Location = New System.Drawing.Point(500, 259)
         Me.txtLoginPassword.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.txtLoginPassword.Multiline = True
         Me.txtLoginPassword.Name = "txtLoginPassword"
         Me.txtLoginPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtLoginPassword.Size = New System.Drawing.Size(418, 35)
+        Me.txtLoginPassword.Size = New System.Drawing.Size(155, 25)
         Me.txtLoginPassword.TabIndex = 3
         '
         'btnLogin
         '
         Me.btnLogin.BackColor = System.Drawing.Color.White
-        Me.btnLogin.Location = New System.Drawing.Point(278, 351)
+        Me.btnLogin.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.btnLogin.Location = New System.Drawing.Point(527, 288)
         Me.btnLogin.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(208, 39)
+        Me.btnLogin.Size = New System.Drawing.Size(101, 30)
         Me.btnLogin.TabIndex = 4
         Me.btnLogin.Text = "Login"
         Me.btnLogin.UseVisualStyleBackColor = False
@@ -77,72 +74,53 @@ Partial Class studentlogin
         'Cancel
         '
         Me.Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.Cancel.Location = New System.Drawing.Point(678, 431)
+        Me.Cancel.Location = New System.Drawing.Point(632, 424)
         Me.Cancel.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.Cancel.Name = "Cancel"
-        Me.Cancel.Size = New System.Drawing.Size(94, 35)
+        Me.Cancel.Size = New System.Drawing.Size(43, 24)
         Me.Cancel.TabIndex = 5
         Me.Cancel.Text = "BACK"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(335, 410)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(307, 29)
-        Me.Label1.TabIndex = 6
-        Me.Label1.Text = "REGISTRATION HERE ☝🏽"
-        '
-        'Timer1
-        '
-        Me.Timer1.Enabled = True
-        Me.Timer1.Interval = 400
-        '
-        'btnRegister
-        '
-        Me.btnRegister.BackColor = System.Drawing.Color.White
-        Me.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.btnRegister.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.btnRegister.Location = New System.Drawing.Point(464, 351)
-        Me.btnRegister.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
-        Me.btnRegister.Name = "btnRegister"
-        Me.btnRegister.Size = New System.Drawing.Size(192, 39)
-        Me.btnRegister.TabIndex = 7
-        Me.btnRegister.Text = "REGISTERATION"
-        Me.btnRegister.UseVisualStyleBackColor = False
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(197, 316)
+        Me.Label2.BackColor = System.Drawing.SystemColors.Window
+        Me.Label2.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(597, 181)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(115, 17)
+        Me.Label2.Size = New System.Drawing.Size(89, 14)
         Me.Label2.TabIndex = 8
         Me.Label2.Text = "Show Password"
         '
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(164, 320)
+        Me.CheckBox1.Location = New System.Drawing.Point(662, 198)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox1.TabIndex = 9
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
-        'PictureBox1
+        'Button1
         '
-        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.PictureBox1.Location = New System.Drawing.Point(328, 86)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(173, 106)
-        Me.PictureBox1.TabIndex = 10
-        Me.PictureBox1.TabStop = False
+        Me.Button1.Location = New System.Drawing.Point(500, 368)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(155, 23)
+        Me.Button1.TabIndex = 11
+        Me.Button1.Text = "forgot password?"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'LinkLabel1
+        '
+        Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.BackColor = System.Drawing.Color.Snow
+        Me.LinkLabel1.Location = New System.Drawing.Point(544, 329)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(65, 13)
+        Me.LinkLabel1.TabIndex = 12
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "register here"
         '
         'studentlogin
         '
@@ -154,11 +132,10 @@ Partial Class studentlogin
         Me.CancelButton = Me.Cancel
         Me.ClientSize = New System.Drawing.Size(820, 479)
         Me.ControlBox = False
-        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.LinkLabel1)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.btnRegister)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Cancel)
         Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.txtLoginPassword)
@@ -170,17 +147,13 @@ Partial Class studentlogin
         Me.Name = "studentlogin"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.TransparencyKey = System.Drawing.SystemColors.ActiveBorder
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TransparencyKey = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Timer1 As Timer
-    Friend WithEvents btnRegister As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Button1 As Button
+    Friend WithEvents LinkLabel1 As LinkLabel
 End Class
