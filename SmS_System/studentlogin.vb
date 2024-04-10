@@ -13,35 +13,7 @@ Public Class studentlogin
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         ' Construct the file path relative to the application's startup path
-        Dim filePath As String = Path.Combine(Application.StartupPath, "users.txt")
 
-        Dim username As String = txtLoginUsername.Text
-        Dim password As String = txtLoginPassword.Text
-        Dim userFound As Boolean = False
-
-        ' Check if the file exists before attempting to read from it
-        If File.Exists(filePath) Then
-            Using reader As New StreamReader(filePath)
-                Dim line As String
-                While Not reader.EndOfStream
-                    line = reader.ReadLine()
-                    Dim userInfo() As String = line.Split(","c)
-                    If userInfo.Length >= 3 AndAlso userInfo(0) = username AndAlso userInfo(2) = password Then
-                        ' User found, open profile form
-                        Dim profileForm As New ProfileForm(userInfo(1), userInfo(3))
-                        profileForm.Show()
-                        userFound = True
-                        Exit While
-                    End If
-                End While
-            End Using
-        Else
-            MessageBox.Show("User database file does not exist. Please sign up first.")
-        End If
-
-        If Not userFound Then
-            MessageBox.Show("Invalid username or password. Please try again.")
-        End If
 
     End Sub
 

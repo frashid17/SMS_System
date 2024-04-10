@@ -10,33 +10,34 @@ Public Class stafflogin
     End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-        Dim username As String = txtUsername.Text.Trim()
-        Dim password As String = txtPassword.Text.Trim()
+        Dim filePath As String = Path.Combine(Application.StartupPath, "staffpass.txt")
 
-        If username = "" Or password = "" Then
-            MessageBox.Show("Please fill in all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Return
+        Dim username As String = txtUsername.Text
+        Dim password As String = txtPassword.Text
+        Dim userFound As Boolean = False
+
+        ' Check if the file exists before attempting to read from it
+        If File.Exists(filePath) Then
+            Using reader As New StreamReader(filePath)
+                Dim line As String
+                While Not reader.EndOfStream
+                    line = reader.ReadLine()
+                    Dim userInfo() As String = line.Split(","c)
+                    If userInfo.Length >= 3 AndAlso userInfo(0) = username AndAlso userInfo(2) = password Then
+                        ' User found, open profile form
+                        Dim profileForm As New ProfileForm(userInfo(1), userInfo(3))
+                        profileForm.Show()
+                        userFound = True
+                        Exit While
+                    End If
+                End While
+            End Using
+        Else
+            MessageBox.Show("User database file does not exist. Please sign up first.")
         End If
 
-        ' Check if the entered credentials match any saved credentials
-        Dim filePath As String = "user_credentials.txt"
-        Dim found As Boolean = False
-        Using reader As New StreamReader(filePath)
-            Dim line As String
-            While Not reader.EndOfStream
-                line = reader.ReadLine()
-                Dim parts() As String = line.Split(",")
-                If parts.Length = 2 AndAlso parts(0) = username AndAlso parts(1) = password Then
-                    found = True
-                    Exit While
-                End If
-            End While
-        End Using
-
-        If found Then
-            MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        Else
-            MessageBox.Show("Invalid username or password. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        If Not userFound Then
+            MessageBox.Show("Invalid username or password. Please try again.")
         End If
 
         ' Clear input fields
@@ -48,5 +49,14 @@ Public Class stafflogin
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Form1.Show()
         Me.Close()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        staffreg.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
     End Sub
 End Class
